@@ -1,0 +1,43 @@
+package zoho_interview;
+
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		String input=s.nextLine();
+		StringBuilder sb=new StringBuilder();
+		int j=0,k=0;
+		int len=input.length();
+		while(k!=(input.length())/2) {
+			for(j=(input.length())/2;j<input.length();j++) {
+				if(input.charAt(j)==' ') {
+					continue;
+				}
+				sb.append(input.charAt(j));
+				for(int l=0;l<len-sb.length();l++) {
+					System.out.print(" ");
+				}
+				sb.append(" ");
+				System.out.println(sb.toString());
+			}
+			
+			if(input.length()==j) {
+				for(k=0;k<(input.length())/2;k++) {
+					if(input.charAt(k)==' ') {
+						continue;
+					}
+					sb.append(input.charAt(k));
+					for(int l=0;l<len-sb.length();l++) {
+						System.out.print(" ");
+					}
+					sb.append(" ");
+					System.out.println(sb.toString());
+				}
+				
+			}
+		}
+		
+	}
+}
